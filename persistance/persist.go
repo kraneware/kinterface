@@ -14,9 +14,8 @@ type Persister interface {
 	LoadFile(path string, name string) (content string)
 	SaveFile(path string, name string, content string) (string, string, error)
 
-	CreatePersister(name string, id string) (Persister, error)
-	InitPersister() (Persister, error)
+	InitPersister() error
 	ClosePersister() error
-	GetPersister() (interface{}, error)
+	GetConnection() (interface{}, error)
 
 }
