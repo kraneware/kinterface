@@ -4,7 +4,7 @@ const (
 	DEBUG = false
 )
 
-type SecretsKeeper interface {
+type Keeper interface {
 	ID() string
 	SetId(id string)
 
